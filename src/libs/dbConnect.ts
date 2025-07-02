@@ -1,6 +1,6 @@
 import mongoose, { Mongoose } from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI = 'mongodb+srv://ayushnishantbro1:TGVX1QAmpAHykkvN@cluster0.lmd1idl.mongodb.net/';
 
 // Define a global type-safe cached connection
 interface MongooseGlobalCache {

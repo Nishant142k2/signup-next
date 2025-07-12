@@ -1,6 +1,11 @@
 import mongoose, { Mongoose } from "mongoose";
 
-const MONGODB_URI = 'mongodb+srv://ayushnishantbro1:TGVX1QAmpAHykkvN@cluster0.lmd1idl.mongodb.net/';
+const MONGODB_URI = process.env.MONGODB_URI as string;
+
+
+if (!MONGODB_URI) {
+  throw new Error("Please define MONGODB_URI in .env.local");
+}
 
 // Define a global type-safe cached connection
 interface MongooseGlobalCache {
